@@ -9,11 +9,15 @@ from textblob import TextBlob
 import threading
 import time
 from openai import OpenAI  # <-- Nueva importación
+import os
+from dotenv import load_dotenv
 
 # ======================================
 # CONFIGURA TU CLAVE DE OPENAI AQUÍ
 # ======================================
-API_KEY = "TU_API_KEY_AQUI"  # Reemplaza con tu clave real
+load_dotenv()
+api_key = os.getenv("API_KEY_TSSI")
+API_KEY = api_key
 
 
 class ChatbotGUI:
